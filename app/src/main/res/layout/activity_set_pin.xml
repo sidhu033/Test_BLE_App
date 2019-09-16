@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     tools:context=".activities.SetPin">
+
+    <!-- Pin progress -->
+
+        <LinearLayout
+            android:id="@+id/pin_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/pinview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="40dp"
+                    android:minHeight="40dp"
+                    android:maxLength="4"
+                    android:inputType="numberPassword"
+                    android:hint="Enter 4 Digit Pin"
+                    android:maxEms="4"
+                    >
+
+                </EditText>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnpin"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#f8a519"
+                android:layout_gravity="center_horizontal"
+                android:background="#f8a519"
+                android:text="OK"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtcreatepin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Create Pin"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
+

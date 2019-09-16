@@ -1,0 +1,88 @@
+<resources>
+    <string name="aap_name">NewBLEUpdated</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="summary">Logs</string>
+
+    <string name="settings">Settings</string>
+    <string name="training_str">Exercises</string>
+    <string name="analytics">Analytics</string>
+    <string name="profile">Profile</string>
+
+    <string name="sys">SYS (mmhg):</string>
+    <string name="dia">DIA (mmhg):</string>
+    <string name="pulse">PULSE:</string>
+
+    <string name="Treatment_cycle">Treatment Cycle (20 Minutes)</string>
+
+    <string name="cycle1_left">Cycle 1 (5m): Pending</string>
+    <string name="cycle2_left">Cycle 2 (5m): Pending</string>
+    <string name="cycle1_right">Cycle 1 (5m): Pending</string>
+    <string name="cycle2_right">Cycle 2 (5m): Pending</string>
+    <string name="lhs">Left Hand Device</string>
+    <string name="rhs">Right Hand Device</string>
+    <string name="registeruser">Register User</string>
+    <string name="treatment_readings_text">Treatment Readings</string>
+
+    <string name="history">History</string>
+
+    <string name="ble_not_supported">BLE is not supported</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+
+    <string name="menu_scan">Scan</string>
+    <string name="menu_stop">Stop</string>
+
+    <!--treatment-->
+
+    <string name="starttreatment">START TREATMENT</string>
+    <string name="lefthanddevice">LEFT HAND DEVICE</string>
+    <string name="righthanddevice">RIGH HAND DEVICE</string>
+
+    <string name="batterylevelas">Battery Level After Start:</string>
+    <string name="batterylevelae">Battery Level After End:</string>
+    <string name="setpin">Set Treatment Pin</string>
+
+    <!--Register user -->
+    <string name="namea">Username</string>
+    <string name="namefirst"> Enter Your First Name</string>
+    <string name="namelast"> Enter Your last Name</string>
+    <string name="pass">Enter Your Password</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="next">Next</string>
+
+    <string name="t_c">I agree to Terms and Conditions.</string>
+
+    <!--string validation -->
+    <string name="please_enter_name">Please Enter Name</string>
+    <string name="please_enter_email">Please Enter Email</string>
+    <string name="please_enter_mobile_number">Please Enter Mobile No</string>
+    <string name="please_enter_password">Please Enter Password</string>
+    <string name="checkbox_validate">Please tick on checkbox</string>
+    <string name="please_enter_your_details_to_login">Please enter login details</string>
+    <string name="hint_username">Enter Username</string>
+    <string name="hint_password">Enter Password</string>
+    <string name="LogIn">Login</string>
+    <string name="register_here">Register Here</string>
+
+
+    <string name="network_not_found">No Internet Connection</string>
+    <string name="select_country">select country</string>
+    <string name="select_state">select state</string>
+    <string name="select_city">Select City</string>
+    <string name="forget_password">Forget Password ?</string>
+    <string name="are_you_new_user_register">Are You new User ? Register</string>
+    <string name="registration">Registration</string>
+    <string name="enter_first_name">Enter First Name</string>
+    <string name="gender">Gender</string>
+    <string name="enter_email_id">Enter Email Id</string>
+    <string name="pincode">Pincode</string>
+    <string name="country">Country</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="already_have_account_login_here">ALREADY HAVE ACCOUNT? LOGIN HERE</string>
+
+</resources>

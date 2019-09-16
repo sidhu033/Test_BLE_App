@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.registerUser_fragment.RegisterUserFragment">
+
+    <include layout="@layout/common_toolbar"/>
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/relRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="55dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                android:textColor="@color/greyTextColor"
+                android:text="Please fill the following fileds \n to register with endocare"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp20"
+                android:layout_below="@+id/relRegistration">
+
+                <!--name-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/ivRegName"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/name_icon"/>
+
+                    <EditText
+                        android:id="@+id/etRegname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:paddingStart="5dp"
+                        android:textSize="12sp"
+
+                        android:hint="@string/hint_username"
+                        android:fontFamily="@font/metropolis_medium"
+                        android:layout_toEndOf="@+id/ivRegName" />
+
+                </RelativeLayout>
+
+                <!--date of birth -->
+                <!--name-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/ivRegDob"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/name_icon"/>
+
+                    <EditText
+                        android:id="@+id/etRegDob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:paddingStart="5dp"
+                        android:textSize="12sp"
+                        android:text=""
+                        android:hint="@string/enter_first_name"
+                        android:fontFamily="@font/metropolis_medium"
+                        android:layout_toEndOf="@+id/ivRegDob" />
+
+                </RelativeLayout>
+
+
+                <!--password-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp">
+
+                    <ImageView
+                        android:id="@+id/ivRegPassword"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="0dp"
+                        android:src="@drawable/pin_icon"
+                        android:layout_alignParentStart="true" />
+
+
+                    <EditText
+                        android:id="@+id/etRegPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/ivRegPassword"
+                        android:layout_toEndOf="@+id/ivRegPassword"
+                        android:fontFamily="@font/metropolis_medium"
+                        android:hint="@string/hint_password"
+                        android:inputType="textPassword"
+                        android:paddingStart="5dp"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <!--Gender-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp">
+
+                    <ImageView
+                        android:id="@+id/ivRegGender"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="0dp"
+                        android:src="@drawable/pin_icon"
+                        android:layout_alignParentStart="true" />
+
+                    <EditText
+                        android:id="@+id/etRegGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/ivRegGender"
+                        android:layout_toEndOf="@+id/ivRegGender"
+                        android:fontFamily="@font/metropolis_medium"
+                        android:hint="@string/gender"
+                        android:inputType="text"
+                        android:paddingStart="5dp"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <!--Email-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp">
+
+                    <ImageView
+                        android:id="@+id/ivRegEmail"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="0dp"
+                        android:src="@drawable/pin_icon"
+                        android:layout_alignParentStart="true" />
+
+                    <EditText
+                        android:id="@+id/etRegEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/ivRegEmail"
+                        android:layout_toEndOf="@+id/ivRegEmail"
+                        android:fontFamily="@font/metropolis_medium"
+                        android:hint="@string/enter_email_id"
+                        android:inputType="text"
+                        android:paddingStart="5dp"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <!--Pincode-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp">
+
+                    <ImageView
+                        android:id="@+id/ivRegPincode"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="0dp"
+                        android:src="@drawable/pin_icon"
+                        android:layout_alignParentStart="true" />
+
+                    <EditText
+                        android:id="@+id/etRegPincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/ivRegPincode"
+                        android:layout_toEndOf="@+id/ivRegPincode"
+                        android:fontFamily="@font/metropolis_medium"
+                        android:hint="@string/pincode"
+                        android:inputType="number"
+                        android:paddingStart="5dp"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+
+
+                <!--Country-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp">
+
+                    <ImageView
+                        android:id="@+id/ivRegCountry"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="0dp"
+                        android:src="@drawable/pin_icon"
+                        android:layout_alignParentStart="true" />
+
+                    <EditText
+                        android:id="@+id/etRegCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/ivRegCountry"
+                        android:layout_toEndOf="@+id/ivRegCountry"
+                        android:fontFamily="@font/metropolis_medium"
+                        android:hint="@string/country"
+                        android:inputType="number"
+                        android:paddingStart="5dp"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+
+
+                <!--Country-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp">
+
+                    <ImageView
+                        android:id="@+id/ivRegState"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="0dp"
+                        android:src="@drawable/pin_icon"
+                        android:layout_alignParentStart="true" />
+
+                    <EditText
+                        android:id="@+id/etRegState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/ivRegState"
+                        android:layout_toEndOf="@+id/ivRegState"
+                        android:fontFamily="@font/metropolis_medium"
+                        android:hint="@string/state"
+                        android:inputType="number"
+                        android:paddingStart="5dp"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+
+                <!--City-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp">
+
+                    <ImageView
+                        android:id="@+id/ivRegCity"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="0dp"
+                        android:src="@drawable/pin_icon"
+                        android:layout_alignParentStart="true" />
+
+                    <EditText
+                        android:id="@+id/etRegCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/ivRegCity"
+                        android:layout_toEndOf="@+id/ivRegCity"
+                        android:fontFamily="@font/metropolis_medium"
+                        android:hint="@string/city"
+                        android:inputType="number"
+                        android:paddingStart="5dp"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <!--House NO-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp">
+
+                    <ImageView
+                        android:id="@+id/ivRegHouseNo"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="0dp"
+                        android:src="@drawable/pin_icon"
+                        android:layout_alignParentStart="true" />
+
+                    <EditText
+                        android:id="@+id/etRegHouseNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/ivRegHouseNo"
+                        android:layout_toEndOf="@+id/ivRegHouseNo"
+                        android:fontFamily="@font/metropolis_medium"
+                        android:hint="House Number"
+                        android:inputType="number"
+                        android:paddingStart="5dp"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <!--Area-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp">
+
+                    <ImageView
+                        android:id="@+id/ivRegArea"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="0dp"
+                        android:src="@drawable/pin_icon"
+                        android:layout_alignParentStart="true" />
+
+                    <EditText
+                        android:id="@+id/etRegArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/ivRegArea"
+                        android:layout_toEndOf="@+id/ivRegArea"
+                        android:fontFamily="@font/metropolis_medium"
+                        android:hint="Area"
+                        android:inputType="number"
+                        android:paddingStart="5dp"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp">
+
+                    <CheckBox
+                        android:id="@+id/cbtnc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rel_reg_pincode"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:buttonTint="#f8a519" />
+
+                    <TextView
+                        android:id="@+id/tv_tnc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/cbtnc"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:text="@string/t_c"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <include layout="@layout/butto_layout"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/already_have_account_login_here"
+                    android:textSize="@dimen/sp13"
+                    android:textColor="@color/greyTextColor"
+                    android:textAlignment="center"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

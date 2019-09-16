@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:id="@+id/ll_intialialreading"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:weightSum="3">
+
+
+           <TextView
+               android:id="@+id/txtinitialrright"
+               android:padding="@dimen/dp10"
+               android:fontFamily="@font/metropolismedium"
+               android:textSize="@dimen/sp15"
+               android:text="Right"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               />
+
+           <TextView
+               android:id="@+id/txtinitialreading"
+               android:padding="@dimen/dp10"
+               android:fontFamily="@font/metropolismedium"
+               android:textSize="@dimen/sp15"
+               android:text="Initial Reading"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               />
+
+           <TextView
+               android:id="@+id/txtinitialrleft"
+               android:layout_gravity="center"
+               android:gravity="center"
+               android:padding="@dimen/dp10"
+               android:fontFamily="@font/metropolismedium"
+               android:textSize="@dimen/sp15"
+               android:text="Left"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               />
+
+
+
+       </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/llinitilareading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_intialialreading">
+
+            <android.support.v7.widget.CardView
+                app:cardCornerRadius="5dp"
+                app:cardPreventCornerOverlap = "false"
+                android:layout_margin="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:padding="8dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtIBLintialright"
+                        android:text="IBL(mmhg): 100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/txtsysintialright"
+                        android:text="SYS(mmhg): 100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txtdiaintialright"
+                        android:text="Dia(mmhg): 100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView1"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/txtpulseintialright"
+                        android:text="pulse(mmhg): 100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                app:cardCornerRadius="5dp"
+                app:cardPreventCornerOverlap = "false"
+                android:layout_weight="0.5"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtsyseintialleft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="SYS(mmhg): 100" />
+
+                    <TextView
+                        android:id="@+id/txtdiaeintialleft"
+                        android:text="Dia(mmhg): 100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/txtpulseeintialleft"
+                        android:text="pulse(mmhg): 100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lltreatmentcycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llinitilareading">
+
+            <TextView
+                android:id="@+id/txttretcycl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/metropolisregular"
+                android:text="@string/Treatment_cycle"
+                android:textSize="@dimen/sp_20"
+                tools:textColor="@android:color/black" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llalltcycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lltreatmentcycle"
+            android:weightSum="2">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="8dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textview_cycle1_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/cycle1_left" />
+
+
+                    <TextView
+                        android:id="@+id/textview_cycle2_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/cycle2_left" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textview_cycle1_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/cycle1_right" />
+
+
+
+                    <TextView
+                        android:id="@+id/textview_cycle2_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/cycle2_right" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llfinalread"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/llalltcycle"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtfinalreading"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/dp10"
+                android:fontFamily="@font/metropolismedium"
+                android:textSize="@dimen/sp15"
+                android:text="final Reading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llfinalreading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llfinalread">
+
+            <android.support.v7.widget.CardView
+                app:cardCornerRadius="5dp"
+                app:cardPreventCornerOverlap = "false"
+                android:layout_margin="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:padding="8dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtsysfinalright"
+                        android:text="SYS(mmhg): 100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txtdiafinalright"
+                        android:text="DIA(mmhg): 100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView1"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/txtmpfinalright"
+                        android:text="pulse(mmhg): 100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView2"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                app:cardCornerRadius="5dp"
+                app:cardPreventCornerOverlap = "false"
+                android:layout_weight="0.5"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtsysfinalleft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="SYS(mmhg): 100" />
+
+                    <TextView
+                        android:id="@+id/txtdiafinalleft"
+                        android:text="Dia(mmhg): 100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView5"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/txtmpfinalleft"
+                        android:text="pulse(mmhg): 100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView4"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.adduser_activity.AddUser">
+
+    <!--Toolbar-->
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adutoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#0d141c"
+        app:contentScrim="#0d141c">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!--  <ImageView
+                  android:id="@+id/imvau"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:padding="3dp"
+                  android:layout_alignParentLeft="true"
+                  android:layout_centerVertical="true"
+                  android:layout_centerInParent="true"
+                  android:layout_centerHorizontal="true"
+                  android:src="@drawable/addicon"
+                  />-->
+
+            <TextView
+                android:id="@+id/txtautitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:text="@string/registeruser"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/metropolisregular"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <!--toolbar closed-->
+
+    <RelativeLayout
+        android:id="@+id/reg_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/sp_10"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/adutoolbar">
+
+
+        <RelativeLayout
+            android:id="@+id/rel_reg_mob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp">
+
+
+            <ImageView
+                android:id="@+id/img_reg_mob_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:src="@drawable/homeicon" />
+
+            <EditText
+                android:id="@+id/et_reg_mob"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@id/img_reg_mob_icon"
+                android:layout_marginLeft="12dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toRightOf="@id/img_reg_mob_icon"
+                android:background="@color/textboxcolor"
+                android:fontFamily="@font/metropolismedium"
+                android:hint="@string/enter_mobile_number"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="10sp"
+                android:singleLine="true"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rel_reg_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/rel_reg_mob"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp">
+
+
+            <ImageView
+                android:id="@+id/img_reg_pass_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:src="@drawable/homeicon" />
+
+            <EditText
+                android:id="@+id/et_reg_pass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:background="@color/textboxcolor"
+                android:layout_alignBottom="@id/img_reg_pass_icon"
+                android:layout_toRightOf="@id/img_reg_pass_icon"
+                android:paddingLeft="10sp"
+                android:maxLength="12"
+                android:fontFamily="@font/metropolismedium"
+                android:hint="@string/pass"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+    <!--reenter password-->
+        <RelativeLayout
+            android:id="@+id/rel_reg_repass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/rel_reg_pass"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp">
+
+
+            <ImageView
+                android:id="@+id/img_reg_repass_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:src="@drawable/homeicon" />
+
+            <EditText
+                android:id="@+id/et_reg_repass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:background="@color/textboxcolor"
+                android:layout_alignBottom="@id/img_reg_repass_icon"
+                android:layout_toRightOf="@id/img_reg_repass_icon"
+                android:paddingLeft="10sp"
+                android:maxLength="12"
+                android:fontFamily="@font/metropolismedium"
+                android:hint="Re Enter Password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true">
+
+        <Button
+            android:id="@+id/btnad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:backgroundTint="#f8a519"
+            android:fontFamily="@font/helveticamedium"
+            android:text="@string/registeruser"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</RelativeLayout>

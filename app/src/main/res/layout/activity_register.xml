@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.registration_activity.RegisterActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--Toolbar-->
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adutoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#0d141c"
+        app:contentScrim="#0d141c">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imvau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:paddingTop="@dimen/dp5"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/gham" />
+
+            <TextView
+                android:id="@+id/txtautitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:text="Registration"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/metropolisregular"
+                />
+
+            <ImageView
+                android:id="@+id/img_reg_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/call_title"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <!--toolbar closed-->
+
+<ScrollView
+    android:layout_below="@+id/adutoolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/sp_10"
+        android:layout_centerHorizontal="true"
+      >
+
+
+        <!-- Registration Username-->
+
+        <RelativeLayout
+            android:id="@+id/rel_reg_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp">
+
+
+            <ImageView
+                android:id="@+id/img_reg_username_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/homeicon" />
+
+            <EditText
+                android:id="@+id/et_reg_username"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+
+                android:layout_alignBottom="@id/img_reg_username_icon"
+                android:layout_toRightOf="@id/img_reg_username_icon"
+                android:paddingLeft="10sp"
+                android:text="Test1234"
+                android:fontFamily="@font/metropolismedium"
+                android:hint="Username"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+
+
+
+        <!-- Registration Name-->
+
+        <RelativeLayout
+            android:id="@+id/rel_reg_firstname"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/rel_reg_username"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp">
+
+
+            <ImageView
+                android:id="@+id/img_reg_name_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/homeicon" />
+
+            <EditText
+                android:id="@+id/et_reg_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:text="siddharth"
+
+                android:layout_alignBottom="@id/img_reg_name_icon"
+                android:layout_toRightOf="@id/img_reg_name_icon"
+                android:paddingLeft="10sp"
+                android:fontFamily="@font/metropolismedium"
+                android:hint="@string/namefirst"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+
+        <!-- Registration Name-->
+        <RelativeLayout
+            android:id="@+id/rel_reg_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_reg_firstname"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp">
+
+
+            <ImageView
+                android:id="@+id/img_reg_lname_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/homeicon" />
+
+            <EditText
+                android:id="@+id/et_reg_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:text="Bhore"
+
+                android:layout_alignBottom="@id/img_reg_lname_icon"
+                android:layout_toRightOf="@id/img_reg_lname_icon"
+                android:paddingLeft="10sp"
+                android:fontFamily="@font/metropolismedium"
+                android:hint="@string/namelast"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textSize="13sp" />
+        </RelativeLayout>
+        <!--Email-->
+        <RelativeLayout
+            android:id="@+id/rel_reg_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/rel_reg_lastname"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/img_reg_email_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:src="@drawable/homeicon" />
+
+            <EditText
+                android:id="@+id/et_reg_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img_reg_email_icon"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/img_reg_email_icon"
+                android:fontFamily="@font/metropolismedium"
+                android:hint="Email ID (Optional)"
+                android:text="sbhore@gmail.com"
+                android:inputType="text"
+
+                android:layout_marginLeft="10sp"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+
+        <!--Date of Birth-->
+        <RelativeLayout
+            android:id="@+id/rel_reg_dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/rel_reg_email"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/img_reg_dob_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:src="@drawable/homeicon" />
+
+            <TextView
+                android:id="@+id/tv_reg_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img_reg_dob_icon"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+
+                android:layout_marginLeft="10sp"
+                android:layout_toRightOf="@id/img_reg_dob_icon"
+                android:fontFamily="@font/metropolismedium"
+                android:hint="@string/date_of_birth"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+
+        <!--select state-->
+        <RelativeLayout
+            android:id="@+id/rel_reg_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/rel_reg_dob"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/img_reg_state_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:src="@drawable/homeicon" />
+
+            <TextView
+                android:id="@+id/tv_reg_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img_reg_state_icon"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+
+                android:layout_marginLeft="10sp"
+                android:layout_toRightOf="@id/img_reg_state_icon"
+                android:fontFamily="@font/metropolismedium"
+                android:hint="@string/select_state"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+
+        <!--select state-->
+        <RelativeLayout
+            android:id="@+id/rel_reg_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/rel_reg_state"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/img_reg_city_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:src="@drawable/homeicon" />
+
+            <TextView
+                android:id="@+id/tv_reg_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img_reg_city_icon"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+
+                android:layout_marginLeft="10sp"
+                android:layout_toRightOf="@id/img_reg_city_icon"
+                android:fontFamily="@font/metropolismedium"
+                android:hint="@string/select_city"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+
+        <!--select state-->
+        <RelativeLayout
+            android:id="@+id/rel_reg_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/rel_reg_city"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/img_reg_address_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:src="@drawable/homeicon" />
+
+            <TextView
+                android:id="@+id/tv_reg_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img_reg_address_icon"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:text="house no 22"
+                android:layout_marginLeft="10sp"
+                android:layout_toRightOf="@id/img_reg_address_icon"
+                android:fontFamily="@font/metropolismedium"
+                android:hint="Address"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+
+        <!--select area-->
+        <RelativeLayout
+            android:id="@+id/rel_reg_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/rel_reg_address"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/img_reg_area_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:src="@drawable/homeicon" />
+
+            <TextView
+                android:id="@+id/tv_reg_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img_reg_area_icon"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:text="belapur navi mumbai"
+                android:layout_marginLeft="10sp"
+                android:layout_toRightOf="@id/img_reg_area_icon"
+                android:fontFamily="@font/metropolismedium"
+                android:hint="area"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+
+        <!--Gender-->
+        <RelativeLayout
+            android:id="@+id/rel_reg_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_reg_area"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/img_reg_gender_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:src="@drawable/homeicon"/>
+
+            <RadioGroup
+                android:id="@+id/rg_reg_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:weightSum="2"
+                android:layout_toEndOf="@+id/img_reg_gender_icon"
+                android:layout_toRightOf="@+id/img_reg_gender_icon"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_male"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/yellow"
+                    android:checked="true"
+                    android:hint="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/yellow"
+                    android:hint="@string/female" />
+            </RadioGroup>
+        </RelativeLayout>
+
+
+        <!--Date of Birth-->
+        <RelativeLayout
+            android:id="@+id/rel_reg_pincode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_reg_gender"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp">
+
+
+            <ImageView
+                android:id="@+id/img_reg_pincode_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:src="@drawable/homeicon" />
+
+            <EditText
+                android:id="@+id/et_reg_pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img_reg_pincode_icon"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:background="@color/textboxcolor"
+                android:layout_marginLeft="10sp"
+                android:layout_toRightOf="@id/img_reg_pincode_icon"
+                android:fontFamily="@font/metropolismedium"
+                android:hint="@string/pincode"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+
+        <CheckBox
+            android:id="@+id/cb_agreetandcondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_reg_pincode"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:buttonTint="#f8a519" />
+
+        <TextView
+            android:id="@+id/tv_tnc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_reg_pincode"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/t_c"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+</ScrollView>
+    <!--add patient-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true">
+
+        <Button
+            android:id="@+id/btn_reg_user"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:backgroundTint="#f8a519"
+            android:fontFamily="@font/metropolismed"
+            android:text="@string/next"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#29B6F6</color>
+    <color name="colorPrimaryDark">#039BE5</color>
+    <color name="colorAccent">#1a237e</color>
+    <color name="primaryLight">#F06292</color>
+    <color name="dullWhite">#e5e5e5</color>
+    <color name="bg2">#424242</color>
+
+
+    <!--Custom Colors Code-->
+
+    <color name="textboxcolor">#e0e0e0</color>
+    <color name="red">#df3930</color>
+
+
+    <!--Custom Colors Code-->
+    <color name="bg">#0d141c</color>
+    <color name="backgroundColor">#F5F6F8</color>
+    <color name="dark_blue">#33435D</color>
+    <color name="white">#ffffff</color>
+    <color name="off_white">#a8ffffff</color>
+    <color name="blackColor">#111516</color>
+    <color name="gray">#dadada</color>
+    <color name="yellow">#f8a519</color>
+    <color name="green">#0c5137</color>
+    <color name="whiteColor">#ffffff</color>
+    <color name="darkBlueColor">#0d141a</color>
+    <color name="liteBlueColor">#1a4063</color>
+    <color name="shadowColor">#DDE9F7</color>
+    <color name="black">#000000</color>
+    <color name="bg_color">#e3ebee</color>
+    <color name="row_grey">#e2e2e2</color>
+    <color name="light_grey">#e2e2e2</color>
+    <color name="buttonColor">#f8a519</color>
+    <color name="greyTextColor">#838383</color>
+    <color name="lightGreyTextColor">#878787</color>
+    <color name="edittextBackColor">#e0e0e0</color>
+    <color name="dateBackColor">#E9E9E9</color>
+    <color name="offWhite">#f7f6f6</color>
+    <color name="red_emergency">#bb0707</color>
+    <color name="selectDayBackgroundColor">#E57373</color>
+    <color name="currentDayBackgroundColor">#B71C1C</color>
+    <color name="multiEventIndicatorColor">#ffffff</color>
+
+
+</resources>

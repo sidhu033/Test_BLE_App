@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/ivEndocare"
+        android:layout_width="@dimen/dp100"
+        android:layout_height="@dimen/dp100"
+        android:src="@drawable/device"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:id="@+id/tvWarning"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="You Cannont Start Treatemnt"
+        android:layout_toRightOf="@+id/ivEndocare"/>/>
+
+    <Button
+        android:id="@+id/dbOk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Ok"
+        android:background="@color/yellow"
+        android:gravity="center"
+        android:textSize="@dimen/sp13"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@+id/ivEndocare"
+        />
+
+</RelativeLayout>
