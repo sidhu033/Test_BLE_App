@@ -64,7 +64,7 @@ public class DashBoardFragment extends Fragment implements DashBoardFragmentView
 
     private CountDownTimer mCountDownTimer;
 
-    private final int CYCLE_DURATION = 1 * 60 * 1000;
+    private final int CYCLE_DURATION = 5 * 60 * 1000;
 
     private DashboardFragmentEvents dashboardFragmentEvents;
     private SharedPreferenceService dashboardpref;

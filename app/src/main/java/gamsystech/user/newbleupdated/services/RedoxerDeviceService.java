@@ -30,13 +30,13 @@ public class RedoxerDeviceService {
 
     final  byte No_of_cycle = (byte) 0x02;              //if (for Bp only no of cycle 00
 
-    final  byte Time_of_cycle_min = (byte) 0x01;            //cycle of time in min
+    final  byte Time_of_cycle_min = (byte) 0x05;            //cycle of time in min
     final  byte Time_of_cycle_sec = (byte) 0x00;
-    final  byte Break_btw_cycle_min = (byte) 0x01;          //after 1 cycle complete break
+    final  byte Break_btw_cycle_min = (byte) 0x05;          //after 1 cycle complete break
     final  byte Break_btw_cycle_sec = (byte) 0x00;
 
     final  byte Delay_of_cycle_device1 = (byte) 0x00;                   //for device start delay
-    final  byte Delay_of_cycle_device2 = (byte) 0x01;                   //Time_of_cycle
+    final  byte Delay_of_cycle_device2 = (byte) 0x05;                   //Time_of_cycle
 
 
 
