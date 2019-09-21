@@ -119,7 +119,7 @@ public class RedoxerDeviceService {
     {
         mBluetoothLeService.setCharacteristicNotification(mDevicereadCharacteristic, true);
         return  mBluetoothLeService.readCharacteristic(mDevicereadCharacteristic);
-
     }
+
 
 }

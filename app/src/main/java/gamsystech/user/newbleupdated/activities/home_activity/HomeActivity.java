@@ -246,10 +246,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 AndyUtils.showToastMsg(getBaseContext(), "Gatt disconnected ");
 
 
-              /*  //start treatment once again
-                if(mDashboardFragament !=null)
+                //start treatment once again
+               /* if(mDashboardFragament !=null)
                 {
-                    stopTreatmentWithError("failed to start device! please restart device again");
+                    checkIfDisconnectedToRightDevice(RIGHT_DEVICE_ADDRESS);
                 }*/
 
             } else if (BluetoothLeService.ACTION_GATT_SERVICES_DISCOVERED.equals(action)) {
@@ -376,7 +376,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
 
             if (stringarrayextra != null) {
-                if (mDashboardFragament != null) {
+                if (mDashboardFragament != null)
+                {
 
                     if (stringarrayextra.contains("Bat Lvl")) {
 
@@ -425,10 +426,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                             R_hr = stringarrayextra.substring(22, 25);
                             R_hr_adc = stringarrayextra.substring(34, 37);
 
-                            mSharedPreferencesService.setPreference(getApplicationContext(), "SYS", R_sys);
+                         /*  mSharedPreferencesService.setPreference(getApplicationContext(), "SYS", R_sys);
                             mSharedPreferencesService.setPreference(getApplicationContext(), "DIA", R_dia);
                             mSharedPreferencesService.setPreference(getApplicationContext(), "HR", R_hr);
-                            mSharedPreferencesService.setPreference(getApplicationContext(), "HR_ADC", R_hr_adc);
+                            mSharedPreferencesService.setPreference(getApplicationContext(), "HR_ADC", R_hr_adc);*/
 
 
                             savetreatmentlogs(R_IB, R_map, R_sys, R_dia, R_hr, R_hr_adc);
@@ -451,6 +452,23 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
                             savetreatmentlogs(L_IB, L_map, L_sys, L_dia, L_hr, L_hr_adc);
                             Log.d(TAG, "Treatment Data" + treatmentLogs);
+                        }
+                        if(mDashboardFragament.currentCycle == mDashboardFragament.RIGHT_HAND_CYCLE_2)
+                        {
+                            R_sys = stringarrayextra.substring(4, 8);
+                            R_dia = stringarrayextra.substring(13, 17);
+                            R_hr = stringarrayextra.substring(22, 25);
+                            R_hr_adc = stringarrayextra.substring(34, 37);
+                            savetreatmentlogs(R_IB, R_map, R_sys, R_dia, R_hr, R_hr_adc);
+
+                        }
+                        if(mDashboardFragament.currentCycle == mDashboardFragament.LEFT_HAND_CYCLE_2)
+                        {
+                            L_sys = stringarrayextra.substring(4, 8);
+                            L_dia = stringarrayextra.substring(13, 17);
+                            L_hr = stringarrayextra.substring(22, 25);
+                            L_hr_adc = stringarrayextra.substring(34, 37);
+                            savetreatmentlogs(L_IB, L_map, L_sys, L_dia, L_hr, L_hr_adc);
                         }
 
                     }
@@ -610,7 +628,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         mBluetoothLeService.connect(LEFT_DEVICE_ADDRESS);
         mBluetoothLeService.mBluetoothGatt.getDevice();
-        AndyUtils.showToastMsg(HomeActivity.this, "Connected to Left Hand device ");
+
+      //  AndyUtils.showToastMsg(HomeActivity.this, "Connected to Left Hand device ");
 
     }
 
@@ -618,7 +637,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public void onCycleTwoDeviceTwoFinshed() {
         mBluetoothLeService.connect(RIGHT_DEVICE_ADDRESS);
 
-        AndyUtils.showToastMsg(HomeActivity.this, "Connected to Right Hand device ");
+      //  AndyUtils.showToastMsg(HomeActivity.this, "Connected to Right Hand device ");
 
     }
 

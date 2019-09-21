@@ -52,7 +52,7 @@ public class LoginActivityPresenter implements  LoginActivityView.Action
                     loginActivityView.OnSucess(loginResponseModel);
 
 
-                    APIHelper.DEVICE_TOEKN =   loginResponseModel.getToken();               //token added to header
+                    APIHelper.DEVICE_TOEKN =   loginResponseModel.getUserLoginResponseModel().getToken();               //token added to header
 
                 }
                 else

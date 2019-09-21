@@ -210,7 +210,7 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityVie
     @Override
     public void OnSucess(LoginResponseModel loginResponseModel) {
 
-         loginActivityPresenter.luanchInstructionactivity(loginResponseModel.getUserId());
+         loginActivityPresenter.luanchInstructionactivity(loginResponseModel.getUserLoginResponseModel().getUserId());
     }
 
     //on sucess

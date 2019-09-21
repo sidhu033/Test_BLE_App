@@ -30,7 +30,7 @@ public interface ApiInterface {
 
     /*for login*/
     @Headers("Content-Type: application/json")
-    @POST("Login/Login")
+    @POST("Login/UserLogin")
     Call<LoginResponseModel> getLogin(@Body LoginRequestModel loginRequestModel);
 
     @Headers("Content-Type: application/json")

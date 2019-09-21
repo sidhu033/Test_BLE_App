@@ -261,7 +261,6 @@ public class DashBoardFragment extends Fragment implements DashBoardFragmentView
                     //connect to left hand device and start the device
                     dashboardFragmentEvents.onCycleOneDeviceOneFinished();
 
-
                 } else if (!textViewRight_cycle1.getText().toString().contains("Complete")) {
                     textViewRight_cycle1.setTypeface(textViewRight_cycle1.getTypeface(), Typeface.BOLD);
                     textViewRight_cycle1.setText("Cycle 1 LHD(5m): " + time);
@@ -299,18 +298,17 @@ public class DashBoardFragment extends Fragment implements DashBoardFragmentView
 
                     savetwobprecords();         //save records of two BP
                     currentCycle = RIGHT_HAND_CYCLE_2;           //current cycle is left hand cycle 1
-                    //startORResumeTreatment();
+                    startORResumeTreatment();
 
                 } else if (!textViewLeft_cycle2.getText().toString().contains("Complete")) {
                     textViewLeft_cycle2.setTypeface(Typeface.SERIF, Typeface.NORMAL);
                     textViewLeft_cycle2.setText("Cycle 2 (5m): Complete");
-
+                    startORResumeTreatment();
                     currentCycle = LEFT_HAND_CYCLE_2;           //current cycle is left hand cycle 1
-                   // startORResumeTreatment();
+
 
                     /*connect to right hand device*/
                     // dashboardFragmentEvents.onCycleTwoDeviceTwoFinshed();
-                    currentCycle = RIGHT_HAND_CYCLE_2;           //current cycle is left hand cycle 1
 
 
                 } else {
@@ -321,7 +319,6 @@ public class DashBoardFragment extends Fragment implements DashBoardFragmentView
                 }
 
             }
-
 
         }.start();
     }
