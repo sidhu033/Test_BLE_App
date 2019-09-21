@@ -265,10 +265,6 @@ public class DashBoardFragment extends Fragment implements DashBoardFragmentView
                     textViewRight_cycle1.setTypeface(textViewRight_cycle1.getTypeface(), Typeface.BOLD);
                     textViewRight_cycle1.setText("Cycle 1 LHD(5m): " + time);
 
-
-                    //connect to righ hand device again and start device
-                    //  dashboardFragmentEvents.onCycleTwoDeviceTwoFinshed();
-
                 } else if (!textViewLeft_cycle2.getText().toString().contains("Complete")) {
                     textViewLeft_cycle2.setTypeface(textViewLeft_cycle2.getTypeface(), Typeface.BOLD);
                     textViewLeft_cycle2.setText("Cycle 2 (5m): " + time);
@@ -282,7 +278,6 @@ public class DashBoardFragment extends Fragment implements DashBoardFragmentView
 
             }
 
-
             @Override
             public void onFinish() {
                 if (!textViewLeft_cycle1.getText().toString().contains("Complete")) {
@@ -294,10 +289,12 @@ public class DashBoardFragment extends Fragment implements DashBoardFragmentView
 
                 } else if (!textViewRight_cycle1.getText().toString().contains("Complete")) {
                     textViewLeft_cycle2.setTypeface(Typeface.SERIF, Typeface.NORMAL);
-                    textViewLeft_cycle1.setText("Cycle 1 (5m): COMPLETE");
+                    textViewLeft_cycle2.setText("Cycle 1 (5m): Complete");
 
                     savetwobprecords();         //save records of two BP
-                    currentCycle = RIGHT_HAND_CYCLE_2;           //current cycle is left hand cycle 1
+
+                    //current cycle is left hand cycle 1
+                    currentCycle = RIGHT_HAND_CYCLE_2;
                     startORResumeTreatment();
 
                 } else if (!textViewLeft_cycle2.getText().toString().contains("Complete")) {

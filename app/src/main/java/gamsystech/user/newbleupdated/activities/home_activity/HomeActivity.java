@@ -247,10 +247,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
 
                 //start treatment once again
-               /* if(mDashboardFragament !=null)
+                if(mDashboardFragament !=null)
                 {
-                    checkIfDisconnectedToRightDevice(RIGHT_DEVICE_ADDRESS);
-                }*/
+                    //checkIfDisconnectedToRightDevice(RIGHT_DEVICE_ADDRESS);
+                    stopTreatmentWithError("restart your device");
+                }
 
             } else if (BluetoothLeService.ACTION_GATT_SERVICES_DISCOVERED.equals(action)) {
                 AndyUtils.showToastMsg(getBaseContext(), "action discovered  successfully");
@@ -282,7 +283,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                                     boolean readbattery = false;
                                         readbattery =      mRedoxerDeviceService.readdevice();
 
-                                    if(readbattery == true)
+                                    if(readbattery == false)
                                     {
                                         Log.d(TAG,"batterylevel"+readbattery);
                                     }
@@ -379,6 +380,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 if (mDashboardFragament != null)
                 {
 
+                    if(stringarrayextra.contains(" Error please restart the your device."))
+                    {
+                        stopTreatmentWithError("Please restart your device ");
+                    }
+
                     if (stringarrayextra.contains("Bat Lvl")) {
 
 
@@ -426,10 +432,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                             R_hr = stringarrayextra.substring(22, 25);
                             R_hr_adc = stringarrayextra.substring(34, 37);
 
-                         /*  mSharedPreferencesService.setPreference(getApplicationContext(), "SYS", R_sys);
-                            mSharedPreferencesService.setPreference(getApplicationContext(), "DIA", R_dia);
-                            mSharedPreferencesService.setPreference(getApplicationContext(), "HR", R_hr);
-                            mSharedPreferencesService.setPreference(getApplicationContext(), "HR_ADC", R_hr_adc);*/
 
 
                             savetreatmentlogs(R_IB, R_map, R_sys, R_dia, R_hr, R_hr_adc);
@@ -445,10 +447,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                             L_hr_adc = stringarrayextra.substring(34, 37);
 
 
-                            mSharedPreferencesService.setPreference(getApplicationContext(), "L_SYS", L_sys);
-                            mSharedPreferencesService.setPreference(getApplicationContext(), "L_DIA", L_dia);
-                            mSharedPreferencesService.setPreference(getApplicationContext(), "L_HR", L_hr);
-                            mSharedPreferencesService.setPreference(getApplicationContext(), "L_HR_ADC", L_hr_adc);
 
                             savetreatmentlogs(L_IB, L_map, L_sys, L_dia, L_hr, L_hr_adc);
                             Log.d(TAG, "Treatment Data" + treatmentLogs);
